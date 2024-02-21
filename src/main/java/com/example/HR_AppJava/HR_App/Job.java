@@ -9,13 +9,18 @@ public class Job {
     private String title;
     private int experiance;
 
-    public void setTitle(){
-        System.out.println("Enter title: ");
+    public Job(){
+        setTitle( title);
+        setExperience(experiance);
+    }
+
+    public void setTitle(String title){
+        System.out.print("Enter title: ");
         this.title = scanner.nextLine();
     }
 
-    public void setExperience(){
-        System.out.println("Enter experience: ");
+    public void setExperience(int experiance){
+        System.out.print("Enter experience(in months): ");
         this.experiance = scanner.nextInt();
     }
 

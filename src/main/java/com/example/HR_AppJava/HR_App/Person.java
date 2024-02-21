@@ -6,13 +6,18 @@ public class Person {
     private String name;
     private int age;
 
-    public void setName(){
-        System.out.println("Enter name: ");
+    public Person(){
+        setName(name);
+        setAge(age);
+    }
+
+    public void setName(String name){
+        System.out.print("Enter name: ");
         this.name = scanner.nextLine();
     }
 
-    public void setAge(){
-        System.out.println("Enter age: ");
+    public void setAge(int age){
+        System.out.print("Enter age: ");
         this.age = scanner.nextInt();
     }
 

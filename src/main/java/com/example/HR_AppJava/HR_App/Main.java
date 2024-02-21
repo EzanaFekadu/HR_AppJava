@@ -4,27 +4,27 @@ import java.util.Scanner;
 
 public class Main {
     Scanner scanner = new Scanner(System.in);    
-
+    static Person p1 = new Person();
+    static Job j1 = new Job();
+    static HardSkill s1 = new HardSkill();
     public static void main(String[] args) {
         
-        Person p1 = new Person();
-        Job j1 = new Job();
-        HardSkill s1 = new HardSkill();
-
         System.out.println("--- Person Details ---");
 
-        p1.setName();
-        p1.setAge();
+        System.out.println("Name: " + p1.getName());
+        System.out.println("Age: " + p1.getAge());
 
         System.out.println("--- Jobs ---");
 
-        j1.setTitle();
-        j1.setExperience();
+        System.out.println("Title: " + j1.getTitle());
+        System.out.println("Experience: " + j1.getExperience() + " months");
+
 
         System.out.println("--- Hard Skills ---");
 
-        s1.setTitle();
-        s1.setLevel();
+        System.out.println("Title: " + s1.getTitle());
+        System.out.println("Level: " + s1.getLevel());
+
     }
     
 }
