@@ -1,0 +1,23 @@
+public interface startDay(){
+    wakeUp();
+    goToWork();
+    sitAtDesk();
+}
+
+public abstract Person(){
+    clockIn(){}
+    clockOut(){}
+    getFired(){}
+}
+
+public class User extends Person implements startDay(){
+    logIn(){}
+    updateData(){}
+    logOut(){}
+}
+
+public class Manager extends User (){
+    hire(){}
+    fire(){}
+    ReadEval(){}
+}
