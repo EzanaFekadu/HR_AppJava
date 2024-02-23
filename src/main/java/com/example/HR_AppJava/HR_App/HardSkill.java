@@ -9,25 +9,30 @@ public class HardSkill {
     private String title;
     private String level;
 
-    public HardSkill(){
-        setTitle(title);
-        setLevel(level);
+    //Constructor
+    public HardSkill(String title, String level){
+        this.title = title;
+        this.level = level;
     }
 
-    public void setTitle(String title){
+    //Modifiers
+    public void setTitle(){
         System.out.print("Enter title(skill): ");
-        this.title = scanner.nextLine();
+        title = scanner.nextLine();
     }
-    public void setLevel(String level){
+    public void setLevel(){
         System.out.print("Enter level: ");
-        this.level = scanner.nextLine();
+        level = scanner.nextLine();
     }
+
+    //Accessors
     public String getTitle(){
         return title;
     }
     public String getLevel(){
         return level;
     }
+    
     public void displayDetails(){
         System.out.println("Title: " + title);
         System.out.println("Level: " + level);

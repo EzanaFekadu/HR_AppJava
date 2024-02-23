@@ -9,21 +9,23 @@ public class Job {
     private String title;
     private int experiance;
 
-    public Job(){
-        setTitle( title);
-        setExperience(experiance);
+    //Constructor
+    public Job(String title, int experiance){
+        this.title = title;
+        this.experiance = experiance;
     }
 
-    public void setTitle(String title){
+    //Modifiers
+    public void setTitle(){
         System.out.print("Enter title: ");
-        this.title = scanner.nextLine();
+        title = scanner.nextLine();
     }
-
-    public void setExperience(int experiance){
+    public void setExperience(){
         System.out.print("Enter experience(in months): ");
-        this.experiance = scanner.nextInt();
+        experiance = scanner.nextInt();
     }
-
+    
+    //Accessors
     public String getTitle(){
         return title;
     }    

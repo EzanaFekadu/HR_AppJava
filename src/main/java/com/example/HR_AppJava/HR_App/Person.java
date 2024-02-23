@@ -6,25 +6,26 @@ public class Person {
     private String name;
     private int age;
 
-    public Person(){
-        setName(name);
-        setAge(age);
+    //Constructor
+    public Person(String name, int age){
+        this.name = name;
+        this.age = age;
     }
 
-    public void setName(String name){
+    //Modifiers
+    public void setName(){
         System.out.print("Enter name: ");
-        this.name = scanner.nextLine();
+        name = scanner.nextLine();
     }
-
-    public void setAge(int age){
+    public void setAge(){
         System.out.print("Enter age: ");
-        this.age = scanner.nextInt();
+        age = scanner.nextInt();
     }
 
+    //Accessors
     public String getName(){
         return name;
     }
-
     public int getAge(){
         return age;
     }

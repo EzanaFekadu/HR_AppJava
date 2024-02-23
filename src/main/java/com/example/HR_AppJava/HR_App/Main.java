@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class Main {
     Scanner scanner = new Scanner(System.in);    
-    static Person p1 = new Person();
-    static Job j1 = new Job();
-    static HardSkill s1 = new HardSkill();
+    static Person p1 = new Person("John Doe", 25);
+    static Job j1 = new Job("Chief Engineer", 62);
+    static HardSkill s1 = new HardSkill("Coding in Python", "Expert");
     public static void main(String[] args) {
-        
+        //Output
         System.out.println("--- Person Details ---");
 
         System.out.println("Name: " + p1.getName());
