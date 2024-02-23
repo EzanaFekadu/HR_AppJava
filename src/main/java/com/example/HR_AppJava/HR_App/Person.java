@@ -1,5 +1,7 @@
 package com.example.HR_AppJava.HR_App;
+
 import java.util.Scanner;
+
 public class Person {
     
     Scanner scanner = new Scanner(System.in);

@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Job {
 
     Scanner scanner = new Scanner(System.in);
-
     private String title;
     private int experiance;
 
@@ -24,7 +23,7 @@ public class Job {
         System.out.print("Enter experience(in months): ");
         experiance = scanner.nextInt();
     }
-    
+
     //Accessors
     public String getTitle(){
         return title;

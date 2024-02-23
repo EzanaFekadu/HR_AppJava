@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class HardSkill {
 
     Scanner scanner = new Scanner(System.in);
-
     private String title;
     private String level;
 
@@ -32,7 +31,7 @@ public class HardSkill {
     public String getLevel(){
         return level;
     }
-    
+
     public void displayDetails(){
         System.out.println("Title: " + title);
         System.out.println("Level: " + level);
