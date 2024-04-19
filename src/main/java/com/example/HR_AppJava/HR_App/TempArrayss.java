@@ -3,7 +3,7 @@ package com.example.HR_AppJava.HR_App;
 import java.util.ArraysList;
 import java.util.jar.Attributes.Name;
 
-public class TempArrayss {
+public class TempArrays {
 /*     //ArraysList<Skill> skills = new ArraysList<>();//Isabella
     ArraysList<String> questions = new ArraysList<String>();//Ezana-Ethan
      ArraysList<String> names = new ArraysList<String>();//Isabella
@@ -16,7 +16,7 @@ public class TempArrayss {
 
     ArrrayList<Object[]> arrays = new ArraysList<>();
 
-    public TempArrayss(){
+    public TempArrays(){
 
     }
     public  void addArrays(Object[] newArrays){
@@ -48,26 +48,26 @@ public class TempArrayss {
     }
 
     public static void main(String[] args) {
-        TempArrayss TempArrayss = new TempArrayss();
+        TempArrays TempArrays = new TempArrays();
         ////////////////////////////////////
-        TempArrayss.addArrays(new String[]{"John"});
-        TempArrayss.addArrays(new String[]{"Team 1"});
+        TempArrays.addArrays(new String[]{"John"});
+        TempArrays.addArrays(new String[]{"Team 1"});
 /* 
-        TempArrayss.addArrays(employees);
-        TempArrayss.addArrays(addressses);
-        TempArrayss.addArrays(users);
-        TempArrayss.addArrays(projects);
-        TempArrayss.addArrays(jobs);
-        TempArrayss.addArrays(questions);
-        TempArrayss.addArrays(skills); */
+        TempArrays.addArrays(employees);
+        TempArrays.addArrays(addressses);
+        TempArrays.addArrays(users);
+        TempArrays.addArrays(projects);
+        TempArrays.addArrays(jobs);
+        TempArrays.addArrays(questions);
+        TempArrays.addArrays(skills); */
         ////////////////////////////////////
-        TempArrayss.addToArrays(0, "Smith");
+        TempArrays.addToArrays(0, "Smith");
         ////////////////////////////////////
-        TempArrayss.editArrays(0, 1, "Doe");
+        TempArrays.editArrays(0, 1, "Doe");
         ////////////////////////////////////
-        //TempArrayss.deleteFromArrays(1);
+        //TempArrays.deleteFromArrays(1);
         ////////////////////////////////////
-        TempArrayss.readArrays(0);
+        TempArrays.readArrays(0);
     }
 
     
