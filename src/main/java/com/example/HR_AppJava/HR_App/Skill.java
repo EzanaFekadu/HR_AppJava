@@ -4,9 +4,9 @@ public class Skill {
 
     private String title; // What is the skill?
     private String skillType; // What kind of skill is it? A hard skill? Soft skill?
-    private String levelOfSkill; // How good are they at the skill?
+    private int levelOfSkill; // How good are they at the skill?
 
-    public Skill(String t, String type, String lev) {
+    public Skill(String t, String type, int lev) {
         title = t;
         skillType = type;
         levelOfSkill = lev;
@@ -20,7 +20,7 @@ public class Skill {
         title = s;
     }
 
-    public void setLevelOfSkill(String lev) {
+    public void setLevelOfSkill(int lev) {
         levelOfSkill = lev;
     }
 
@@ -28,7 +28,7 @@ public class Skill {
         return skillType;
     }
 
-    public String getSkillLevel() {
+    public int getSkillLevel() {
         return levelOfSkill;
     }
 
