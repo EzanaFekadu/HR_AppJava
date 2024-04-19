@@ -9,7 +9,7 @@ public class Team{
   public Team(){
     members = new ArrayList<>();
     skills = new ArrayList<>();
-    projects = new Project;
+    projects = new Project();
     teamId = 1000;
   }
   public Team(int id, Project proj, ArrayList<Employee> emp, ArrayList<Skill> s){
