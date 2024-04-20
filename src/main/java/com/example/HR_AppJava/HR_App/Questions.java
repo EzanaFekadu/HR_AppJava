@@ -21,4 +21,11 @@ public class Questions {
     public String getQuestion(int i){
         return questions[i];
     }
+    /////////////////////////////////////////////////////////////////////////////////////
+    private String question;
+    private String response;
+
+    public String returnQuestion();
+    public void enterResponse(String r);
+    public String toString();
 }

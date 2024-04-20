@@ -1,5 +1,7 @@
 package com.example.HR_AppJava.HR_App;
 
+import java.util.ArrayList;
+
 public class Evaluations extends Questions{
     String[] questions;
 
@@ -34,4 +36,10 @@ public class Evaluations extends Questions{
         System.out.println("Done");
         
     }
+    ////////////////////////////////////////////////////////////////////////////////
+
+    ArrayList<Questions> questions2;
+    public void addQuestion(questions q);
+    public void deleteQuestion(int index);
+    public void deleteQuestion(String question);
 }

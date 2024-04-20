@@ -1,39 +1,61 @@
 package com.example.HR_AppJava.HR_App;
 
-import java.util.Scanner;
-
-public class Person {
-    
-    Scanner scanner = new Scanner(System.in);
+public abstract class Person {
+    // Instance Variables
     private String name;
-    private int age;
+    private String address;
+    /// private BufferedImage picture;
+    private String phoneNumber;
+    private String email;
 
-    //Constructor
-    public Person(String name, int age){
-        this.name = name;
-        this.age = age;
+    public Person(String n, String add, String num, String em) {
+        name = n;
+        address = add;
+        phoneNumber = num;
+        email = em;
     }
 
-    //Modifiers
-    public void setName(){
-        System.out.print("Enter name: ");
-        name = scanner.nextLine();
-    }
-    public void setAge(){
-        System.out.print("Enter age: ");
-        age = scanner.nextInt();
+    public Person() {
+        name = "";
+        address = "";
+        phoneNumber = "";
+        email = "";
     }
 
-    //Accessors
-    public String getName(){
+    // setters
+    public void setName(String n) {
+        name = n;
+    }
+
+    public void setAddress(String add) {
+        address = add;
+    }
+
+    // public void setPicture();
+    public void setPhoneNumber(String phone) {
+        phoneNumber = phone;
+    }
+
+    public void setEmail(String e) {
+        email = e;
+    }
+
+    // getters
+    public String getName() {
         return name;
     }
-    public int getAge(){
-        return age;
+
+    public String getAddress() {
+        return address;
     }
 
-    public void displayDetails(){
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
+    /// public BufferedImage getImage();
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
 }
