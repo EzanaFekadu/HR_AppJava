@@ -6,7 +6,7 @@ public class Employee extends Person {
     private int empID;
     private int currJobID;
     private ArrayList<Job> pastJobs;
-    private ArrayList<Eval> evaluations;
+    private ArrayList<Evaluations> evaluations;
     private ArrayList<Skill> skills;
     private Job currJob;
     private Team currTeam;
@@ -18,7 +18,7 @@ public class Employee extends Person {
         currJobID = 0;
         teamID = 0;
         pastJob = new ArrayList<Job>();
-        evaluations = new ArrayList<Eval>();
+        evaluations = new ArrayList<Evaluations>();
         skills = new ArrayList<Skill>();
         currJob = new Job();
         currTeam = new Team();
@@ -61,12 +61,26 @@ public class Employee extends Person {
         return currJobID;
     }
 
-    /*
-     * public String getPastJob();
-     * public String getEvals();
-     * public String getSkills();
-     * public Job getCurrJob();
-     * public Team getCurrTeam();]
-     */
+    public ArrayList<Job> getPastJob() {
+        return pastJobs;
+    }
+
+    public ArrayList<Evaluations> getEvals() {
+        return evaluations;
+    }
+
+    public ArrayList<Skills> getSkills() {
+        return skills;
+    }
+
+    public Job getCurrJob() {
+        return currJob;
+    }
+
+    public Team getCurrTeam();
+
+    {
+        return currTeam;
+    }
 
 }

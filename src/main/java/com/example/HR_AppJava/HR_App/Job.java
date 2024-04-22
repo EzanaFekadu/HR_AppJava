@@ -2,7 +2,7 @@ package com.example.HR_AppJava.HR_App;
 
 import java.util.Scanner;
 
-public class Job {
+public class Job implements Identification {
 
     Scanner scanner = new Scanner(System.in);
     private String title;
@@ -37,6 +37,11 @@ public class Job {
     public void displayDetails() {
         System.out.println("Title: " + title);
         System.out.println("Experience: " + experiance);
+
+    }
+
+    private void createID() {
+        String id = "J-";
 
     }
 }

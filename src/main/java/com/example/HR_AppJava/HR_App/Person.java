@@ -3,13 +3,15 @@ package com.example.HR_AppJava.HR_App;
 public abstract class Person {
     // Instance Variables
     private String name;
+    private int age;
     private String address;
     /// private BufferedImage picture;
     private String phoneNumber;
     private String email;
 
-    public Person(String n, String add, String num, String em) {
+    public Person(String n, int a, String add, String num, String em) {
         name = n;
+        age = a;
         address = add;
         phoneNumber = num;
         email = em;
@@ -17,6 +19,7 @@ public abstract class Person {
 
     public Person() {
         name = "";
+        age = 0;
         address = "";
         phoneNumber = "";
         email = "";
@@ -25,6 +28,10 @@ public abstract class Person {
     // setters
     public void setName(String n) {
         name = n;
+    }
+
+    public void setAge(int a) {
+        age = a;
     }
 
     public void setAddress(String add) {
@@ -43,6 +50,10 @@ public abstract class Person {
     // getters
     public String getName() {
         return name;
+    }
+
+    public int getAge() {
+        return age;
     }
 
     public String getAddress() {
