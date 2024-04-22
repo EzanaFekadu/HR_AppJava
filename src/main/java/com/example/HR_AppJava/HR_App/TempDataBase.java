@@ -1,5 +1,5 @@
 package com.example.HR_AppJava.HR_App;
-
+//We collaborated on everything together, no one method was done individually.
 import java.util.ArrayList;
 
 public class TempDataBase {
