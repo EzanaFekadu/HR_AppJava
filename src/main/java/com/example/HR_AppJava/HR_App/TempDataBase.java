@@ -11,11 +11,19 @@ public class TempDataBase {
 
     // add items
     public void addItem(int listIndex, Object obj) {
+        // Check to see if listIndex is in bounds
         if (listIndex >= 0 && listIndex < arrays.size()) {
-            // Object[] array=arrays.get(listIndex);
+
+            // gets next null/empty position in array method will return -1 if there isn't
+            // an empty spot in the array
             int nullIndex = checkArray(listIndex);
+
+            // if there is an empty spot add the object into it
             if (nullIndex > -1) {
                 arrays.get(listIndex)[nullIndex] = obj;
+
+                // if there isn't an empty spot, create a bigger array and re-get the empty
+                // position and put the object into it
             } else {
                 enlargeArray(listIndex);
                 nullIndex = checkArray(listIndex);
@@ -27,10 +35,13 @@ public class TempDataBase {
     }
 
     // Method to edit an item in an array
-    public void editItemInArray(int listIndex, int itemIndex, Object newItem) {
+    public void editItem(int listIndex, int itemIndex, Object newItem) {
         // checking to ensure listIndex is in bounds
+
         if (listIndex >= 0 && listIndex < arrays.size()) {
-            // checking to ensure itemIndex is in bounds
+
+            // checking to ensure itemIndex is in bounds then replaces the old item with the
+            // new item
             if (itemIndex >= 0 && itemIndex < arrays.get(listIndex).length) {
                 arrays.get(listIndex)[itemIndex] = newItem;
             } else {
@@ -80,10 +91,15 @@ public class TempDataBase {
     }
 
     private int checkArray(int index) {
+
+        // sets the array in arrays to tempArr
         Object[] tempArr = arrays.get(index);
         int x = -1;
 
+        // loop to check for next empty value
         for (int i = 0; i < tempArr.length; i++) {
+            // if the spot is null aka empty then x or the return value is set to that spot
+            // and break from loop
             if (tempArr[i] == null) {
                 x = i;
                 break;
