@@ -6,7 +6,7 @@ public class TempDataBase {
     private ArrayList<Object[]> arrays;
 
     public TempDataBase() {
-        arrays = new ArrayList<Object[]>();
+        arrays = new ArrayList<>();
     }
 
     // add items
@@ -30,7 +30,7 @@ public class TempDataBase {
                 arrays.get(listIndex)[nullIndex] = obj;
             }
         } else {
-            System.err.println("Array index out of bounds");
+            System.out.println("Array index out of bounds");
         }
     }
 
@@ -45,10 +45,10 @@ public class TempDataBase {
             if (itemIndex >= 0 && itemIndex < arrays.get(listIndex).length) {
                 arrays.get(listIndex)[itemIndex] = newItem;
             } else {
-                System.err.println("Item index out of bounds");
+                System.out.println("Item index out of bounds");
             }
         } else {
-            System.err.println("Array index out of bounds");
+            System.out.println("Array index out of bounds");
         }
     }
 
@@ -72,10 +72,10 @@ public class TempDataBase {
                 // set original array equal to new array aka tempArr
                 arrays.set(listIndex, tempArr);
             } else {
-                System.err.println("Item index out of bounds");
+                System.out.println("Item index out of bounds");
             }
         } else {
-            System.err.println("Array index out of bounds");
+            System.out.println("Array index out of bounds");
         }
     }
 
@@ -114,13 +114,14 @@ public class TempDataBase {
     public void readItemsInArray(int listIndex) {
         if (listIndex >= 0 && listIndex < arrays.size()) {
             Object[] array = arrays.get(listIndex);
-            System.out.print("Items in array " + listIndex + ": ");
-            for (Object item : array) {
+            //print out the items in the array
+            System.out.print("Items in array " + (listIndex + 1) + ": ");
+            for (Object item : array) {//goes through every item
                 System.out.print(item + " ");
             }
             System.out.println();
         } else {
-            System.err.println("Array index out of bounds");
+            System.out.println("Array index out of bounds");
         }
     }
 
@@ -133,4 +134,6 @@ public class TempDataBase {
     public void deleteArray(int listIndex) {
         arrays.remove(listIndex);
     }
+
+    
 }

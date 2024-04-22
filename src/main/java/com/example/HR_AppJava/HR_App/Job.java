@@ -39,9 +39,4 @@ public class Job implements Identification {
         System.out.println("Experience: " + experiance);
 
     }
-
-    private void createID() {
-        String id = "J-";
-
-    }
 }
