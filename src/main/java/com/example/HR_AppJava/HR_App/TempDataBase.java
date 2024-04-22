@@ -69,13 +69,15 @@ public class TempDataBase {
     }
 
     private void enlargeArray(int listIndex) {
+        //assign the length of the array we want to enlarge to the oldSize variable 
         int oldSize = arrays.get(listIndex).length;
+        //create a new array with double the size of the old one
         Object[] newArray = new Object[2 * oldSize];
-
+        //assign each element of the old array to the new one
         for (int i = 0; i < oldSize; i++) {
             newArray[i] = arrays.get(listIndex)[i];
         }
-
+        //replace the old array with the new one
         arrays.set(listIndex, newArray);
     }
 
