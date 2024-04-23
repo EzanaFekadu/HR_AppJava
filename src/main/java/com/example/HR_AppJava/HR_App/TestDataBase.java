@@ -1,5 +1,4 @@
-package main.java.com.example.HR_AppJava.HR_App;
-import java.util.ArrayList;
+package com.example.HR_AppJava.HR_App;
 public class TestDataBase {
     public static void main(String[] args) {
         TempDataBase dataBase = new TempDataBase();

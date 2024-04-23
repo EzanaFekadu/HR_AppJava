@@ -1,6 +1,7 @@
 package com.example.HR_AppJava.HR_App;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Employee extends Person {
     private int empID;
@@ -10,7 +11,6 @@ public class Employee extends Person {
     private ArrayList<Skill> skills;
     private Job currJob;
     private Team currTeam;
-    private int teamID;
 
     public Employee() {
         super();
@@ -18,8 +18,8 @@ public class Employee extends Person {
         currJobID = 0;
         teamID = 0;
         pastJob = new ArrayList<Job>();
-        evaluations = new ArrayList<Evaluations>();
-        skills = new ArrayList<Skill>();
+        evaluations = new ArrayList<>();
+        skills = new ArrayList<>();
         currJob = new Job();
         currTeam = new Team();
     }
@@ -47,7 +47,11 @@ public class Employee extends Person {
         currJobID = jobid;
     }
 
-    // public void updateExperience(Skill skill, int experience);
+    public void updateExperience(Skill skill, int newExperience) {
+        int index = skills.indexOf(skill);
+        skills.get(index).setLevelOfSkill(newExperience);
+    }
+
     public void setCurrTeam(Team team) {
         currTeam = team;
     }
@@ -61,15 +65,15 @@ public class Employee extends Person {
         return currJobID;
     }
 
-    public ArrayList<Job> getPastJob() {
+    public List<Job> getPastJob() {
         return pastJobs;
     }
 
-    public ArrayList<Evaluations> getEvals() {
+    public List<Evaluations> getEvals() {
         return evaluations;
     }
 
-    public ArrayList<Skills> getSkills() {
+    public List<Skills> getSkills() {
         return skills;
     }
 
@@ -77,9 +81,7 @@ public class Employee extends Person {
         return currJob;
     }
 
-    public Team getCurrTeam();
-
-    {
+    public Team getCurrTeam() {
         return currTeam;
     }
 

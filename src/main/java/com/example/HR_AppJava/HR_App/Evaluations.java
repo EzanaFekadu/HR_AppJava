@@ -2,44 +2,29 @@ package com.example.HR_AppJava.HR_App;
 
 import java.util.ArrayList;
 
-public class Evaluations extends Questions{
-    String[] questions;
+public class Evaluations {
+    ArrayList<Questions> questions;
 
-    @Override
-    public void addQuestion(int i) {
-        // TODO Auto-generated method stub
-        System.out.println("Enter question: ");
-        String question = scanner.nextLine();
-        questions[i] = question;
-        //super.addQuestion(i);
+    public Evaluations(){
+        questions = new ArrayList<>();
     }
 
-    @Override
-    public String getQuestion(int i) {
-        // TODO Auto-generated method stub
-        return questions[i];
-        //return super.getQuestion(i);
+    
+    public void addQuestion(Questions q) {
+        questions.add(q);
     }
 
-    @Override
-    public String getAnswer() {
-        // TODO Auto-generated method stub
-        return super.getAnswer();
+    
+    public Questions getQuestion(int i) {
+        return questions.get(i);
     }
 
-    public static void main(String[] args) {
-        Questions questionsObj = new Questions();
-        int i = 0;
-        questionsObj.addQuestion(i);
-        System.out.println("Return");
-        questionsObj.getQuestion(i);
-        System.out.println("Done");
-        
+    
+    public String getAnswer(int i) {
+        return questions.get(i).getResponse();
     }
-    ////////////////////////////////////////////////////////////////////////////////
 
-    ArrayList<Questions> questions2;
-    public void addQuestion(questions q);
-    public void deleteQuestion(int index);
-    public void deleteQuestion(String question);
+    public void deleteQuestion(int i){
+        questions.remove(i);
+    }
 }

@@ -1,9 +1,12 @@
 
 import java.util.ArrayList;
+import java.util.List;
+
+import com.example.HR_AppJava.HR_App.Employee;
 import com.example.HR_AppJava.HR_App.Evaluations;
 import com.example.HR_AppJava.HR_App.User;
 
-public class Manager implements User{
+public class Manager extends Employee implements User {
   private String username;
   private String password;
   private String title;
@@ -20,6 +23,7 @@ public class Manager implements User{
     teams = new ArrayList<>();
     evaluations = new ArrayList<>();
   }
+
   //modifier
   public void setTitle(String t){
     title = t;
@@ -29,38 +33,38 @@ public class Manager implements User{
   public String getTitle(){
     return title;
   }
-  public ArrayList getEvals(){
-    
-  }
-  public ArrayList getEmployees(){
 
+  public List getEvals(){
+    return evaluations;
   }
-  public ArrayList getTeams(){
 
+  public List getEmployees(){
+    return employees;
   }
-  public void findSkills(int skillId){
 
+  public List getTeams(){
+    return teams;
   }
-  public void getTeamMembers(int teamId){
 
-  }
-  public void getEmployeeData(int empId){
+  public List findSkilledEmployees(Skill s){
+    ArrayList<> employee = new ArrayList<>();
 
+    for (int i = 0; i < employees.size(); i++) {
+      if(employees.get(i).getSkills().indexOf(s) > 0){
+        employees.get(i);
+      }
+    }
+    return employee;
   }
 
   //methods
   public void changePassword(String newPass){
     password = newPass;
   }
-  public void manageTeams(int teamId, ArrayList empIds){
-
+  
+  public boolean login(String user, String pass){
+    if(user == username && pass == password)
+      return true;
+    return false;
   }
-  public void employeeEval(int empId, int index){
-
-  }
-  public void addEvalTemp(Evaluations eval){
-    evaluations.add(eval);
-  }
-
-
 }

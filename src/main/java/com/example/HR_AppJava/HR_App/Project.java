@@ -14,7 +14,7 @@ public class Project {
         projectId = 2000;
     }
     
-    public Project(ArrayList<Skill> reqSkills, boolean comp, int id){
+    public Project(List<Skill> reqSkills, boolean comp, int id){
         completed = false;
         requiredSkills = reqSkills;
         projectId = id;
