@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "GUI_Login",
+            "request": "launch",
+            "mainClass": "com.example.HR_AppJava.HR_App.GUI_Login",
+            "projectName": "HR_APPJAVA"
+        },
+        {
+            "type": "java",
             "name": "Evaluations",
             "request": "launch",
             "mainClass": "com.example.HR_AppJava.HR_App.Evaluations",
