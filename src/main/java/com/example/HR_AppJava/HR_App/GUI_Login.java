@@ -1,3 +1,5 @@
+package main.java.com.example.HR_AppJava.HR_App;
+
 import javax.swing.*;
 import java.awt.*;
 
