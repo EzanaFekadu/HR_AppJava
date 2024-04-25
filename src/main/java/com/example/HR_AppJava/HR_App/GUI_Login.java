@@ -60,7 +60,7 @@ class UserInfoFrame extends JFrame {
 
         JPanel panel = new JPanel(new BorderLayout());
 
-        JLabel userInfoLabel = new JLabel("Name: John Doe\nAddress: 123 Main St");
+        JLabel userInfoLabel = new JLabel("Name: John Doe \nAddress: 123 Main St");
         ImageIcon imageIcon = new ImageIcon("user_image.jpg"); // Replace with actual path to the image
         JLabel imageLabel = new JLabel(imageIcon);
 
