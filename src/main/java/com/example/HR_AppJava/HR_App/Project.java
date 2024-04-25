@@ -7,20 +7,22 @@ public class Project {
     private boolean completed;
     private ArrayList<Skill> requiredSkills;
     private int projectId;
-    //constructor
-    public Project(){
+
+    // constructor
+    public Project() {
         completed = false;
         requiredSkills = new ArrayList<>();
         projectId = 2000;
     }
-    
-    public Project(List<Skill> reqSkills, boolean comp, int id){
+
+    public Project(ArrayList<Skill> reqSkills, boolean comp, int id) {
         completed = false;
         requiredSkills = reqSkills;
         projectId = id;
     }
-    //methods
-     public String checkSkill(Skill skill){
+
+    // methods
+    public String checkSkill(Skill skill) {
         boolean exists = requiredSkills.contains(skill);
         if (exists) {
             return "";
@@ -28,16 +30,19 @@ public class Project {
             return "Doesn't meet the skill requirement.";
 
         }
-     }
-     //modifier
-     public void setId(int id){
+    }
+
+    // modifier
+    public void setId(int id) {
         projectId = id;
-     }
-     //accessor
-     public int getId(){
+    }
+
+    // accessor
+    public int getId() {
         return projectId;
-     }
-     public List<Skill> getRequiredSkills(){
+    }
+
+    public List<Skill> getRequiredSkills() {
         return requiredSkills;
-     }
+    }
 }
