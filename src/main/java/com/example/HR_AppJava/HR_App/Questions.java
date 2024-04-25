@@ -1,29 +1,31 @@
 package com.example.HR_AppJava.HR_App;
+
 import java.util.Scanner;
+
 public class Questions {
     Scanner scanner = new Scanner(System.in);
-    
+
     private String question;
     private String response;
 
-    public Questions(){
+    public Questions() {
         question = "";
-        answer="";
+        response = "";
     }
 
-    public void enterResponse(String r){
+    public void enterResponse(String r) {
         response = r;
     }
 
-    public String getAnswer(){
+    public String getAnswer() {
         return response;
     }
 
-    public String getQuestion(int i){
-        return questions[i];
+    public String getQuestion(int i) {
+        return question;
     }
-    
-    public String toString(){
+
+    public String toString() {
         return question + "\t " + response;
     }
 }
