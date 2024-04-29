@@ -10,7 +10,7 @@ public class AppLogo {
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new JFrame("Logo Demo");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setSize(400, 400);
+            frame.setSize(600, 400);
 
             JPanel canvas = new JPanel() {
                 @Override
