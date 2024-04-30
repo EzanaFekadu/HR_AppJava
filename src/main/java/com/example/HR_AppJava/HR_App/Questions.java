@@ -17,7 +17,7 @@ public class Questions {
         response = r;
     }
 
-    public String getAnswer() {
+    public String getResponse() {
         return response;
     }
 

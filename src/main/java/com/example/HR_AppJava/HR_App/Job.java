@@ -2,16 +2,21 @@ package com.example.HR_AppJava.HR_App;
 
 import java.util.Scanner;
 
-public class Job implements Identification {
+public class Job {
 
     Scanner scanner = new Scanner(System.in);
     private String title;
-    private int experiance;
+    private int experience;
 
-    // Constructor
-    public Job(String title, int experiance) {
+    // Constructors
+    public Job() {
+        title = "";
+        experience = 0;
+    }
+
+    public Job(String title, int experience) {
         this.title = title;
-        this.experiance = experiance;
+        this.experience = experience;
     }
 
     // Modifiers
@@ -22,7 +27,7 @@ public class Job implements Identification {
 
     public void setExperience() {
         System.out.print("Enter experience(in months): ");
-        experiance = scanner.nextInt();
+        experience = scanner.nextInt();
     }
 
     // Accessors
@@ -31,12 +36,12 @@ public class Job implements Identification {
     }
 
     public int getExperience() {
-        return experiance;
+        return experience;
     }
 
     public void displayDetails() {
         System.out.println("Title: " + title);
-        System.out.println("Experience: " + experiance);
+        System.out.println("Experience: " + experience);
 
     }
 }

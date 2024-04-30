@@ -6,9 +6,7 @@ import java.util.ArrayList;
 
 public class GUI_EvaluationPage {
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            new EvalPage();
-        });
+        new EvalPage();
     }
 }
 

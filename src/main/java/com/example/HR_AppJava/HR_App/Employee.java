@@ -16,8 +16,7 @@ public class Employee extends Person {
         super();
         empID = 0;
         currJobID = 0;
-        teamID = 0;
-        pastJob = new ArrayList<Job>();
+        pastJobs = new ArrayList<Job>();
         evaluations = new ArrayList<>();
         skills = new ArrayList<>();
         currJob = new Job();
@@ -37,7 +36,7 @@ public class Employee extends Person {
         pastJobs.add(j);
     }
 
-    public void addEval(Evaluation eval) {
+    public void addEval(Evaluations eval) {
         evaluations.add(eval);
     }
 
@@ -73,7 +72,7 @@ public class Employee extends Person {
         return evaluations;
     }
 
-    public List<Skills> getSkills() {
+    public List<Skill> getSkills() {
         return skills;
     }
 

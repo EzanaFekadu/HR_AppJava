@@ -1,21 +1,36 @@
-package main.java.com.example.HR_AppJava.HR_App;
+package com.example.HR_AppJava.HR_App;
 
 import javax.swing.*;
+
 import java.awt.*;
 
 public class GUI_Login {
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            new LoginScreen();
-        });
+
+        Manager one = new Manager();
+        one.setUsername("bob.smith@company.com");
+        one.changePassword("catsAreCool");
+
+        Manager two = new Manager();
+        two.setUsername("mary.shelly@company.com");
+        two.changePassword("dogsRock");
+
+        Manager[] managers = new Manager[2];
+        managers[0] = one;
+        managers[1] = two;
+
+        new LoginScreen(managers);
+
     }
 }
 
 class LoginScreen extends JFrame {
     private JTextField usernameField;
     private JPasswordField passwordField;
+    private Manager[] managers;
 
-    public LoginScreen() {
+    public LoginScreen(Manager[] mans) {
+        managers = mans;
         setTitle("Login");
         setSize(300, 150);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -31,12 +46,19 @@ class LoginScreen extends JFrame {
         loginButton.addActionListener(e -> {
             String username = usernameField.getText();
             String password = new String(passwordField.getPassword());
-            if (username.equals("admin") && password.equals("admin")) {
-                setVisible(false);
-                new UserInfoFrame();
-            } else {
-                JOptionPane.showMessageDialog(this, "Invalid username or password", "Error", JOptionPane.ERROR_MESSAGE);
+            for (int i = 0; i < managers.length; i++) {
+                if (username.equals(managers[i].getUsername())) {
+                    if (password.equals(managers[i].getPassword())) {
+                        setVisible(false);
+                        new UserInfoFrame();
+                    }
+
+                } else {
+                    JOptionPane.showMessageDialog(this, "Invalid username or password", "Error",
+                            JOptionPane.ERROR_MESSAGE);
+                }
             }
+
         });
 
         panel.add(usernameLabel);
