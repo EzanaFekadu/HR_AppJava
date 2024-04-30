@@ -5,9 +5,7 @@ import java.awt.*;
 
 public class GUI_Login {
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            new LoginScreen();
-        });
+        SwingUtilities.invokeLater(LoginScreen::new);
     }
 }
 
@@ -18,7 +16,7 @@ class LoginScreen extends JFrame {
     public LoginScreen() {
         setTitle("Login");
         setSize(300, 150);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
         JPanel panel = new JPanel(new GridLayout(3, 2));
@@ -55,7 +53,7 @@ class UserInfoFrame extends JFrame {
     public UserInfoFrame() {
         setTitle("User Information");
         setSize(400, 300);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
         JPanel panel = new JPanel(new BorderLayout());
@@ -65,9 +63,7 @@ class UserInfoFrame extends JFrame {
         JLabel imageLabel = new JLabel(imageIcon);
 
         JButton closeButton = new JButton("Close");
-        closeButton.addActionListener(e -> {
-            dispose(); // Close the frame
-        });
+        closeButton.addActionListener(e -> dispose()); //Close the frame
 
         panel.add(userInfoLabel, BorderLayout.NORTH);
         panel.add(imageLabel, BorderLayout.CENTER);

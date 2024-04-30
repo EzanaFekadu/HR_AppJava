@@ -1,4 +1,4 @@
-package com.example.HR_AppJava.HR_App;
+package main.java.com.example.HR_AppJava.HR_App;
 
 import javax.swing.*;
 import java.awt.*;
@@ -6,19 +6,17 @@ import java.util.ArrayList;
 
 public class GUI_EvaluationPage {
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            new EvalPage();
-        });
+        SwingUtilities.invokeLater(() -> new EvalPage());
     }
 }
 
 class EvalPage extends JFrame {
-    private ArrayList<JTextField> responseFields = new ArrayList<JTextField>();
+    private ArrayList<JTextField> responseFields = new ArrayList<>();
 
     public EvalPage() {
         setTitle("Evaluation");
         setSize(600, 400);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
         JPanel panel = new JPanel(new GridLayout(6, 2));
@@ -55,27 +53,18 @@ class EvalPage extends JFrame {
         });
 
         panel.add(question1);
-        // panel.add(new JLabel());
         panel.add(responseFields.get(0));
-        // panel.add(new JLabel());
 
         panel.add(question2);
-        // panel.add(new JLabel());
         panel.add(responseFields.get(1));
-        // panel.add(new JLabel());
 
         panel.add(question3);
-        // panel.add(new JLabel());
         panel.add(responseFields.get(2));
-        // panel.add(new JLabel());
 
         panel.add(question4);
-        // panel.add(new JLabel());
         panel.add(responseFields.get(3));
-        // panel.add(new JLabel());
 
         panel.add(question5);
-        // panel.add(new JLabel());
         panel.add(responseFields.get(4));
 
         panel.add(new JLabel());
@@ -90,7 +79,7 @@ class submissionPage extends JFrame {
     public submissionPage() {
         setTitle("User Information");
         setSize(400, 300);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
         JPanel panel = new JPanel(new BorderLayout());
@@ -98,9 +87,7 @@ class submissionPage extends JFrame {
         JLabel submitLabel = new JLabel("Evaluation successfully submitted!");
 
         JButton closeButton = new JButton("Close");
-        closeButton.addActionListener(e -> {
-            dispose(); // Close the frame
-        });
+        closeButton.addActionListener(e -> dispose()); // Close the frame
 
         panel.add(submitLabel, BorderLayout.CENTER);
         panel.add(closeButton, BorderLayout.SOUTH);
@@ -115,7 +102,7 @@ class submissionErrorPage extends JFrame {
     public submissionErrorPage() {
         setTitle("User Information");
         setSize(400, 300);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
         JPanel panel = new JPanel(new BorderLayout());
