@@ -1,5 +1,5 @@
 package com.example.HR_AppJava.HR_App;
-
+//This is the old logo
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
