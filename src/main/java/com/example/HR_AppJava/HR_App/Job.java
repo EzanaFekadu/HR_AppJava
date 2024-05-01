@@ -7,15 +7,18 @@ public class Job {
     Scanner scanner = new Scanner(System.in);
     private String title;
     private int experience;
+    private String department;
 
     // Constructors
     public Job() {
         title = "";
+        department = "";
         experience = 0;
     }
 
-    public Job(String title, int experience) {
+    public Job(String title, String department, int experience) {
         this.title = title;
+        this.department = department;
         this.experience = experience;
     }
 
@@ -29,10 +32,19 @@ public class Job {
         System.out.print("Enter experience(in months): ");
         experience = scanner.nextInt();
     }
+    
+    public void setDepartment() {
+        System.out.print("Enter department: ");
+        department = scanner.nextLine();
+    }
 
     // Accessors
     public String getTitle() {
         return title;
+    }
+    
+    public String getDepartment() {
+        return department;
     }
 
     public int getExperience() {
@@ -42,6 +54,7 @@ public class Job {
     public void displayDetails() {
         System.out.println("Title: " + title);
         System.out.println("Experience: " + experience);
+        System.out.println("Department: " + department);
 
     }
 }
