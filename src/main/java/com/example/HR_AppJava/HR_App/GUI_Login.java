@@ -7,19 +7,23 @@ import java.awt.*;
 public class GUI_Login {
     public static void main(String[] args) {
 
-        Manager one = new Manager();
-        one.setUsername("bob.smith@company.com");
-        one.changePassword("catsAreCool");
-
-        Manager two = new Manager();
-        two.setUsername("mary.shelly@company.com");
-        two.changePassword("dogsRock");
-
-        Manager[] managers = new Manager[2];
-        managers[0] = one;
-        managers[1] = two;
-
-        new LoginScreen(managers);
+        /*
+         * Manager one = new Manager();
+         * one.setUsername("bob.smith@company.com");
+         * one.changePassword("catsAreCool");
+         * 
+         * Manager two = new Manager();
+         * two.setUsername("mary.shelly@company.com");
+         * two.changePassword("dogsRock");
+         * 
+         * Manager[] managers = new Manager[2];
+         * managers[0] = one;
+         * managers[1] = two;
+         * 
+         * new LoginScreen(managers);
+         * 
+         * SwingUtilities.invokeLater(() -> new LoginScreen(managers));
+         */
 
     }
 }
@@ -27,13 +31,13 @@ public class GUI_Login {
 class LoginScreen extends JFrame {
     private JTextField usernameField;
     private JPasswordField passwordField;
-    private Manager[] managers;
+    private Object[] managers;
 
-    public LoginScreen(Manager[] mans) {
-        managers = mans;
+    public LoginScreen(Object[] mans) {
+        Object[] managers = mans;
         setTitle("Login");
         setSize(300, 150);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
         JPanel panel = new JPanel(new GridLayout(3, 2));
@@ -47,8 +51,8 @@ class LoginScreen extends JFrame {
             String username = usernameField.getText();
             String password = new String(passwordField.getPassword());
             for (int i = 0; i < managers.length; i++) {
-                if (username.equals(managers[i].getUsername())) {
-                    if (password.equals(managers[i].getPassword())) {
+                if (username.equals(managers[i])) {
+                    if (password.equals(managers[i])) {
                         setVisible(false);
                         new UserInfoFrame();
                     }
@@ -77,7 +81,7 @@ class UserInfoFrame extends JFrame {
     public UserInfoFrame() {
         setTitle("User Information");
         setSize(400, 300);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
         JPanel panel = new JPanel(new BorderLayout());
@@ -87,9 +91,7 @@ class UserInfoFrame extends JFrame {
         JLabel imageLabel = new JLabel(imageIcon);
 
         JButton closeButton = new JButton("Close");
-        closeButton.addActionListener(e -> {
-            dispose(); // Close the frame
-        });
+        closeButton.addActionListener(e -> dispose()); // Close the frame
 
         panel.add(userInfoLabel, BorderLayout.NORTH);
         panel.add(imageLabel, BorderLayout.CENTER);
