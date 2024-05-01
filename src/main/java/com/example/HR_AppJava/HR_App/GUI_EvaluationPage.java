@@ -1,4 +1,4 @@
-package main.java.com.example.HR_AppJava.HR_App;
+package com.example.HR_AppJava.HR_App;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,38 +12,47 @@ public class GUI_EvaluationPage {
 }
 
 class EvalPage extends JFrame {
+    // instance variable -> stores the text gathered from the responseFields
     private ArrayList<JTextField> responseFields = new ArrayList<>();
 
     public EvalPage() {
+        // Set up the page settings
         setTitle("Evaluation");
         setSize(600, 400);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
+        // Page components
         JPanel panel = new JPanel(new GridLayout(6, 2));
         JLabel question1 = new JLabel("How would you rate your productivity?");
         JLabel question2 = new JLabel("How is your workspace environment?");
         JLabel question3 = new JLabel("Is your team getting along?");
         JLabel question4 = new JLabel("Is the project coming to terms well?");
         JLabel question5 = new JLabel("How is your mental health doing?");
-
-        responseFields.add(new JTextField());
-        responseFields.add(new JTextField());
-        responseFields.add(new JTextField());
-        responseFields.add(new JTextField());
-        responseFields.add(new JTextField());
-
         JButton submitButton = new JButton("Submit");
         submitButton.setSize(20, 20);
 
+        // Adding the text field to the arrayList
+        responseFields.add(new JTextField());
+        responseFields.add(new JTextField());
+        responseFields.add(new JTextField());
+        responseFields.add(new JTextField());
+        responseFields.add(new JTextField());
+
+        // Action Listener for when the submitButton is pressed
         submitButton.addActionListener(e -> {
-            System.out.println(responseFields.get(0).getText());
+            // records if all textfields are filled out
             boolean allAnswered = true;
+
+            // loops through text fields and ensure there is text input from user
             for (int i = 0; i < responseFields.size(); i++) {
                 if ((responseFields.get(i).getText().equals(""))) {
                     allAnswered = false;
                 }
             }
+
+            // if all text fields are filled out -> display completion page
+            // and if they are not -> display completion error page
             if (allAnswered) {
                 setVisible(false);
                 new submissionPage();
@@ -53,6 +62,7 @@ class EvalPage extends JFrame {
             }
         });
 
+        // Add all page componets to page -> spaces indicate when a new row begins
         panel.add(question1);
         panel.add(responseFields.get(0));
 
@@ -71,6 +81,7 @@ class EvalPage extends JFrame {
         panel.add(new JLabel());
         panel.add(submitButton);
 
+        // finally display the page
         add(panel);
         setVisible(true);
     }
@@ -78,21 +89,25 @@ class EvalPage extends JFrame {
 
 class submissionPage extends JFrame {
     public submissionPage() {
+        // page details
         setTitle("User Information");
         setSize(400, 300);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
+        // page components
         JPanel panel = new JPanel(new BorderLayout());
-
         JLabel submitLabel = new JLabel("Evaluation successfully submitted!");
-
         JButton closeButton = new JButton("Close");
-        closeButton.addActionListener(e -> dispose()); // Close the frame
 
+        // Action Listener for the closeButton to close the frame
+        closeButton.addActionListener(e -> dispose());
+
+        // Add components to page
         panel.add(submitLabel, BorderLayout.CENTER);
         panel.add(closeButton, BorderLayout.SOUTH);
 
+        // display page
         add(panel);
         setVisible(true);
     }
@@ -101,13 +116,14 @@ class submissionPage extends JFrame {
 
 class submissionErrorPage extends JFrame {
     public submissionErrorPage() {
+        // page details
         setTitle("User Information");
         setSize(400, 300);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
+        // Page components
         JPanel panel = new JPanel(new BorderLayout());
-
         JLabel submitLabel = new JLabel("Evaluation not submitted, looks like something is missing.");
 
         JButton closeButton = new JButton("Close");
@@ -116,9 +132,11 @@ class submissionErrorPage extends JFrame {
             new EvalPage();
         });
 
+        // add components to page
         panel.add(submitLabel, BorderLayout.CENTER);
         panel.add(closeButton, BorderLayout.SOUTH);
 
+        //
         add(panel);
         setVisible(true);
     }

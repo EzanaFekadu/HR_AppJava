@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "GUI_EmployeePage",
+            "request": "launch",
+            "mainClass": "com.example.HR_AppJava.HR_App.GUI_EmployeePage",
+            "projectName": "HR_APPJAVA"
+        },
+        {
+            "type": "java",
             "name": "Main1",
             "request": "launch",
             "mainClass": "com.example.HR_AppJava.HR_App.Main1",

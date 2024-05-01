@@ -1,10 +1,5 @@
 package com.example.HR_AppJava.HR_App;
 
-import javax.swing.*;
-
-import java.awt.*;
-import javax.swing.SwingUtilities;
-
 public class Main1 {
     public static void main(String[] args) {
         TempDataBase dataBase = new TempDataBase();
@@ -21,8 +16,8 @@ public class Main1 {
         managers[0] = one;
         managers[1] = two;
 
-        SwingUtilities.invokeLater(() -> {
-            new LoginScreen(managers);
-        });
+        GUI_Login login = new GUI_Login(managers);
+        login.createLogin();
+
     }
 }
