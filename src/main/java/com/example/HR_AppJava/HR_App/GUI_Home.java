@@ -2,21 +2,25 @@ package main.java.com.example.HR_AppJava.HR_App;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class GUI_Home {
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(WelcomePage::new);
+        SwingUtilities.invokeLater(WelcomePage::new);       
     }
+    
 }
 
 class WelcomePage extends JFrame {
+
     public WelcomePage() {
         setTitle("Welcome");
         setSize(300, 200);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        JPanel panel = new JPanel(BorderLayout());
+        JPanel panel = new JPanel();
         ImageIcon imageIcon = new ImageIcon("HR_App/HR_App_Logo.png");
         JLabel imageLabel = new JLabel(imageIcon);
         imageLabel.setIcon(new ImageIcon(getClass().getResource("HR_App/HR_App_Logo.png")));
@@ -27,13 +31,12 @@ class WelcomePage extends JFrame {
             setVisible(false);/* 
             new LoginScreen(); */
         });
-
-        panel.add(imageIcon);
+        frame.add(panel);
+        
+        //panel.add(imageIcon);
         panel.add(imageLabel);
         panel.add(starButton);
 
-
-        add(panel);
         setVisible(true);
     }
 }
