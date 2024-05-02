@@ -1,7 +1,7 @@
+package com.example.HR_AppJava.HR_App;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import com.example.HR_AppJava.HR_App.Skill;
 
 public class Project {
     private boolean completed;
@@ -44,5 +44,9 @@ public class Project {
 
     public List<Skill> getRequiredSkills() {
         return requiredSkills;
+    }
+
+    public void updateCompletion() {
+        completed = true;
     }
 }

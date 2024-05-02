@@ -1,4 +1,5 @@
 package com.example.HR_AppJava.HR_App;
+
 //We collaborated on everything together, no one method was done individually.
 import java.util.ArrayList;
 
@@ -81,15 +82,15 @@ public class TempDataBase {
     }
 
     private void enlargeArray(int listIndex) {
-        //assign the length of the array we want to enlarge to the oldSize variable 
+        // assign the length of the array we want to enlarge to the oldSize variable
         int oldSize = arrays.get(listIndex).length;
-        //create a new array with double the size of the old one
+        // create a new array with double the size of the old one
         Object[] newArray = new Object[2 * oldSize];
-        //assign each element of the old array to the new one
+        // assign each element of the old array to the new one
         for (int i = 0; i < oldSize; i++) {
             newArray[i] = arrays.get(listIndex)[i];
         }
-        //replace the old array with the new one
+        // replace the old array with the new one
         arrays.set(listIndex, newArray);
     }
 
@@ -115,9 +116,9 @@ public class TempDataBase {
     public void readItemsInArray(int listIndex) {
         if (listIndex >= 0 && listIndex < arrays.size()) {
             Object[] array = arrays.get(listIndex);
-            //print out the items in the array
+            // print out the items in the array
             System.out.print("Items in array " + (listIndex + 1) + ": ");
-            for (Object item : array) {//goes through every item
+            for (Object item : array) {// goes through every item
                 System.out.print(item + " ");
             }
             System.out.println();
@@ -136,5 +137,8 @@ public class TempDataBase {
         arrays.remove(listIndex);
     }
 
-    
+    public Object[] getArray(int index) {
+        return arrays.get(index);
+    }
+
 }

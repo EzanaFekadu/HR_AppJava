@@ -1,21 +1,19 @@
+package com.example.HR_AppJava.HR_App;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import com.example.HR_AppJava.HR_App.Employee;
-import com.example.HR_AppJava.HR_App.Evaluations;
-import com.example.HR_AppJava.HR_App.User;
 
 public class Manager extends Employee implements User {
   private String username;
   private String password;
   private String title;
-  ArrayList<Employee> employees;
-  ArrayList<Team> teams;
-  ArrayList<Evaluation> evaluations;
+  private ArrayList<Employee> employees;
+  private ArrayList<Team> teams;
+  private ArrayList<Evaluations> evaluations;
 
-  //constructor
-  public Manager(){
+  // constructor
+  public Manager() {
+    super();
     username = "";
     password = "";
     title = "";
@@ -24,47 +22,60 @@ public class Manager extends Employee implements User {
     evaluations = new ArrayList<>();
   }
 
-  //modifier
-  public void setTitle(String t){
+  // modifier
+  public void setTitle(String t) {
     title = t;
   }
 
-  //accessor
-  public String getTitle(){
+  // accessor
+  public String getTitle() {
     return title;
   }
 
-  public List getEvals(){
+  public List getEvals() {
     return evaluations;
   }
 
-  public List getEmployees(){
+  public List getEmployees() {
     return employees;
   }
 
-  public List getTeams(){
+  public List getTeams() {
     return teams;
   }
 
-  public List findSkilledEmployees(Skill s){
-    ArrayList<> employee = new ArrayList<>();
+  public List findSkilledEmployees(Skill s) {
+    ArrayList<Employee> employees = new ArrayList<>();
 
     for (int i = 0; i < employees.size(); i++) {
-      if(employees.get(i).getSkills().indexOf(s) > 0){
+      if (employees.get(i).getSkills().indexOf(s) > 0) {
         employees.get(i);
       }
     }
-    return employee;
+    return employees;
   }
 
-  //methods
-  public void changePassword(String newPass){
+  public String getUsername() {
+    return username;
+  }
+
+  public String getPassword() {
+    return password;
+  }
+
+  // methods
+  public void changePassword(String newPass) {
     password = newPass;
   }
-  
-  public boolean login(String user, String pass){
-    if(user == username && pass == password)
+
+  public void setUsername(String name) {
+    username = name;
+  }
+
+  public boolean login(String user, String pass) {
+    if (user == username && pass == password)
       return true;
     return false;
   }
+
 }
