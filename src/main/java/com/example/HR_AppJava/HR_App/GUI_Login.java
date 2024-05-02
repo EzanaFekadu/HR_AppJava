@@ -63,7 +63,7 @@ class UserInfoFrame extends JFrame {
         JLabel imageLabel = new JLabel(imageIcon);
 
         JButton closeButton = new JButton("Close");
-        closeButton.addActionListener(e -> dispose()); //Close the frame
+        closeButton.addActionListener(e -> dispose()); // Close the frame
 
         panel.add(userInfoLabel, BorderLayout.NORTH);
         panel.add(imageLabel, BorderLayout.CENTER);

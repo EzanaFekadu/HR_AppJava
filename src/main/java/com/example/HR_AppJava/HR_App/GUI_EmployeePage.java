@@ -7,8 +7,8 @@ public class GUI_EmployeePage extends JFrame{
     public static void main(String[] args) {
         // Create a JFrame (window)
         JFrame frame = new JFrame("Employee page");
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setSize(400, 300); // Set the window size
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         // Create a JTable with sample data
         String[] columnNames = {"Name", "Age", "Address"};

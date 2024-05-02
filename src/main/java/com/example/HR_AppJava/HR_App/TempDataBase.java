@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class TempDataBase {
     private ArrayList<Object[]> arrays;
+    private String outOfBound = "Array index out of bounds";
 
     public TempDataBase() {
         arrays = new ArrayList<>();
@@ -30,7 +31,7 @@ public class TempDataBase {
                 arrays.get(listIndex)[nullIndex] = obj;
             }
         } else {
-            System.out.println("Array index out of bounds");
+            System.out.println(outOfBound);
         }
     }
 
@@ -48,7 +49,7 @@ public class TempDataBase {
                 System.out.println("Item index out of bounds");
             }
         } else {
-            System.out.println("Array index out of bounds");
+            System.out.println(outOfBound);
         }
     }
 
@@ -75,7 +76,7 @@ public class TempDataBase {
                 System.out.println("Item index out of bounds");
             }
         } else {
-            System.out.println("Array index out of bounds");
+            System.out.println(outOfBound);
         }
     }
 
@@ -121,7 +122,7 @@ public class TempDataBase {
             }
             System.out.println();
         } else {
-            System.out.println("Array index out of bounds");
+            System.out.println(outOfBound);
         }
     }
 
