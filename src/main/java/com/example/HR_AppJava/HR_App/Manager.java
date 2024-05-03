@@ -1,4 +1,4 @@
-package com.example.HR_AppJava.HR_App;
+package main.java.com.example.HR_AppJava.HR_App;
 
 import java.util.ArrayList;
 import java.util.List;
