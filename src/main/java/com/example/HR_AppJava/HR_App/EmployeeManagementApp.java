@@ -1,5 +1,7 @@
 package main.java.com.example.HR_AppJava.HR_App;
 
+//THIS IS A DRAFT/SAMPLE CODE
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 

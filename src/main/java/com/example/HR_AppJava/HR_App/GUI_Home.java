@@ -1,5 +1,7 @@
 package main.java.com.example.HR_AppJava.HR_App;
 
+//THIS IS A DRAFT
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
