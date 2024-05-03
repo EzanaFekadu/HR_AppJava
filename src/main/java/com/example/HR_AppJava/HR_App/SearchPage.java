@@ -1,6 +1,7 @@
 package main.java.com.example.HR_AppJava.HR_App;
 
 //THIS IS A DRAFT/SAMPLE CODE
+//look into change event instead of click event
 
 import java.awt.*;
 import javax.swing.*;
