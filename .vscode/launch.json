@@ -1,0 +1,63 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "GUI_EmployeePage",
+            "request": "launch",
+            "mainClass": "com.example.HR_AppJava.HR_App.GUI_EmployeePage",
+            "projectName": "HR_APPJAVA"
+        },
+        {
+            "type": "java",
+            "name": "Main1",
+            "request": "launch",
+            "mainClass": "com.example.HR_AppJava.HR_App.Main1",
+            "projectName": "HR_APPJAVA"
+        },
+        {
+            "type": "java",
+            "name": "GUI_EvaluationPage",
+            "request": "launch",
+            "mainClass": "com.example.HR_AppJava.HR_App.GUI_EvaluationPage",
+            "projectName": "HR_APPJAVA"
+        },
+        {
+            "type": "java",
+            "name": "GUI_Login",
+            "request": "launch",
+            "mainClass": "com.example.HR_AppJava.HR_App.GUI_Login",
+            "projectName": "HR_APPJAVA"
+        },
+        {
+            "type": "java",
+            "name": "Evaluations",
+            "request": "launch",
+            "mainClass": "com.example.HR_AppJava.HR_App.Evaluations",
+            "projectName": "HR_APPJAVA"
+        },
+        {
+            "type": "java",
+            "name": "TempArrays",
+            "request": "launch",
+            "mainClass": "com.example.HR_AppJava.HR_App.TempArrays",
+            "projectName": "HR_APPJAVA"
+        },
+        {
+            "type": "java",
+            "name": "TaskMasterApp",
+            "request": "launch",
+            "mainClass": "com.example.HR_AppJava.TaskMasterApp",
+            "projectName": "HR_APPJAVA"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-Main<HR_APPJAVA>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.HR_AppJava.HR_App.Main",
+            "projectName": "HR_APPJAVA",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

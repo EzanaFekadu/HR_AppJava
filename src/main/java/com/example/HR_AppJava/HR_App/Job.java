@@ -6,36 +6,55 @@ public class Job {
 
     Scanner scanner = new Scanner(System.in);
     private String title;
-    private int experiance;
+    private int experience;
+    private String department;
 
-    //Constructor
-    public Job(String title, int experiance){
-        this.title = title;
-        this.experiance = experiance;
+    // Constructors
+    public Job() {
+        title = "";
+        department = "";
+        experience = 0;
     }
 
-    //Modifiers
-    public void setTitle(){
+    public Job(String title, String department, int experience) {
+        this.title = title;
+        this.department = department;
+        this.experience = experience;
+    }
+
+    // Modifiers
+    public void setTitle() {
         System.out.print("Enter title: ");
         title = scanner.nextLine();
     }
-    public void setExperience(){
+
+    public void setExperience() {
         System.out.print("Enter experience(in months): ");
-        experiance = scanner.nextInt();
+        experience = scanner.nextInt();
+    }
+    
+    public void setDepartment() {
+        System.out.print("Enter department: ");
+        department = scanner.nextLine();
     }
 
-    //Accessors
-    public String getTitle(){
+    // Accessors
+    public String getTitle() {
         return title;
-    }    
-
-    public int getExperience(){
-        return experiance;
+    }
+    
+    public String getDepartment() {
+        return department;
     }
 
-    public void displayDetails(){
+    public int getExperience() {
+        return experience;
+    }
+
+    public void displayDetails() {
         System.out.println("Title: " + title);
-        System.out.println("Experience: " + experiance);
+        System.out.println("Experience: " + experience);
+        System.out.println("Department: " + department);
 
     }
 }
