@@ -29,7 +29,7 @@ public class EmployeeManagementApp {
             searchDropdown = new JComboBox<>(new String[]{"Name", "Team", "Department"});
             searchField = new JTextField(20);
             searchButton = new JButton("Search");
-            employeeTable = new JTable(); // You'll need to populate this with data
+            employeeTable = new JTable(); // needs to be populated with data
             addButton = new JButton("Add");
             editButton = new JButton("Edit");
             deleteButton = new JButton("Delete");
@@ -57,13 +57,13 @@ public class EmployeeManagementApp {
             searchButton.addActionListener(e -> {
                 // Perform search based on selected criteria (Name, Team, or Department)
                 String searchText = searchField.getText();
-                // Implement your search logic here
+                // Implement search logic here
                 // Update the employeeTable with search results
             });
 
             addButton.addActionListener(e -> {
                 // Show a dialog to add a new employee
-                // Implement your add logic here
+                // Implement add logic here
                 showAddEmployeeDialog(tableModel);
             });
             
@@ -75,11 +75,11 @@ public class EmployeeManagementApp {
             ////////////////////////////////////////////////////////////
             editButton.addActionListener(e -> {
                 // Show a dialog to edit an existing employee
-                // Implement your edit logic here
+                // Implement edit logic here
             });
 
             deleteButton.addActionListener(e -> {
-                // Implement your delete logic here
+                // Implement delete logic here
             });
 
             // Show the frame
@@ -118,13 +118,13 @@ public class EmployeeManagementApp {
 }
 public class showAddEmployeeDialog {
 
-    
+    //Dialod  for add
 }
 public class showDeleteEmployeeDialog {
 
-    
+    //Dialod  for delete
 }
 public class showEditEmployeeDialog {
 
-    
+    //Dialod  for edit
 }
