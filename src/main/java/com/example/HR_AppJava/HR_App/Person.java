@@ -1,5 +1,6 @@
 package com.example.HR_AppJava.HR_App;
 
+//An Image instance variable will need to be added
 public abstract class Person {
     // Instance Variables
     private String name;
@@ -9,6 +10,7 @@ public abstract class Person {
     private String phoneNumber;
     private String email;
 
+    // Constructors
     public Person(String n, int a, String add, String num, String em) {
         name = n;
         age = a;

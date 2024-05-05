@@ -3,7 +3,10 @@ package com.example.HR_AppJava.HR_App;
 import java.util.ArrayList;
 import java.util.List;
 
+//Subclass
 public class Employee extends Person {
+
+    // Instance classes
     private int empID;
     private int currJobID;
     private ArrayList<Job> pastJobs;
@@ -12,6 +15,7 @@ public class Employee extends Person {
     private Job currJob;
     private Team currTeam;
 
+    // Base Constructor
     public Employee() {
         super();
         empID = 0;
@@ -46,6 +50,8 @@ public class Employee extends Person {
         currJobID = jobid;
     }
 
+    // Finds the skill and then increases the experience of that skill in the
+    // ArrayList
     public void updateExperience(Skill skill, int newExperience) {
         int index = skills.indexOf(skill);
         skills.get(index).setLevelOfSkill(newExperience);

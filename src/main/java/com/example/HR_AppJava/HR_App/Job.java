@@ -3,7 +3,7 @@ package com.example.HR_AppJava.HR_App;
 import java.util.Scanner;
 
 public class Job {
-
+    // Instance Variables
     Scanner scanner = new Scanner(System.in);
     private String title;
     private int experience;
@@ -32,7 +32,7 @@ public class Job {
         System.out.print("Enter experience(in months): ");
         experience = scanner.nextInt();
     }
-    
+
     public void setDepartment() {
         System.out.print("Enter department: ");
         department = scanner.nextLine();
@@ -42,7 +42,7 @@ public class Job {
     public String getTitle() {
         return title;
     }
-    
+
     public String getDepartment() {
         return department;
     }

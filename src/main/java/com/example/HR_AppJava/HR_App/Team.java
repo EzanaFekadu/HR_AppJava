@@ -17,6 +17,7 @@ public class Team {
     teamId = 1000;
   }
 
+  // constructor
   public Team(int id, Project proj, ArrayList<Employee> emp, ArrayList<Skill> s) {
     members = emp;
     skills = s;

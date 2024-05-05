@@ -1,4 +1,4 @@
-package main.java.com.example.HR_AppJava.HR_App;
+package com.example.HR_AppJava.HR_App;
 
 //THIS IS A DRAFT/SAMPLE CODE
 
@@ -11,13 +11,13 @@ import java.awt.event.ActionListener;
 
 public class EmployeeManagementApp {
 
-            private static JComboBox<String> searchDropdown = new JComboBox<>(new String[]{"Name", "Team", "Department"});
-            private static JTextField searchField;
-            private static JButton searchButton;
-            private static JTable employeeTable;
-            private static JButton addButton;
-            private static JButton editButton;
-            private static JButton deleteButton;
+    private static JComboBox<String> searchDropdown = new JComboBox<>(new String[] { "Name", "Team", "Department" });
+    private static JTextField searchField;
+    private static JButton searchButton;
+    private static JTable employeeTable;
+    private static JButton addButton;
+    private static JButton editButton;
+    private static JButton deleteButton;
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
@@ -26,7 +26,7 @@ public class EmployeeManagementApp {
             frame.setSize(800, 600);
 
             // Create components
-            searchDropdown = new JComboBox<>(new String[]{"Name", "Team", "Department"});
+            searchDropdown = new JComboBox<>(new String[] { "Name", "Team", "Department" });
             searchField = new JTextField(20);
             searchButton = new JButton("Search");
             employeeTable = new JTable(); // needs to be populated with data
@@ -66,12 +66,12 @@ public class EmployeeManagementApp {
                 // Implement add logic here
                 showAddEmployeeDialog(tableModel);
             });
-            
+
             frame.setLayout(new BorderLayout());
-                frame.add(new JScrollPane(employeeTable), BorderLayout.CENTER);
-                frame.add(addButton, BorderLayout.SOUTH);
-            
-                frame.setVisible(true);
+            frame.add(new JScrollPane(employeeTable), BorderLayout.CENTER);
+            frame.add(addButton, BorderLayout.SOUTH);
+
+            frame.setVisible(true);
             ////////////////////////////////////////////////////////////
             editButton.addActionListener(e -> {
                 // Show a dialog to edit an existing employee
@@ -86,24 +86,24 @@ public class EmployeeManagementApp {
             frame.setVisible(true);
         });
     }
+
     private static void showAddEmployeeDialog(DefaultTableModel tableModel) {
-        JDialog dialog = new JDialog(); 
-        dialog.setTitle("Add Employee"); 
-        dialog.setSize(300, 150);    
-        dialog.setModal(true);       
-        
+        JDialog dialog = new JDialog();
+        dialog.setTitle("Add Employee");
+        dialog.setSize(300, 150);
+        dialog.setModal(true);
+
         JTextField nameField = new JTextField(20);
         JTextField departmentField = new JTextField(20);
-        JButton saveButton = new JButton("Save");    
-            
-    
+        JButton saveButton = new JButton("Save");
+
         saveButton.addActionListener(e -> {
             String name = nameField.getText();
             String department = departmentField.getText();
-            tableModel.addRow(new Object[]{name, department});
+            tableModel.addRow(new Object[] { name, department });
             dialog.dispose();
         });
-    
+
         JPanel panel = new JPanel(new GridLayout(3, 2));
         panel.add(new JLabel("Name:"));
         panel.add(nameField);
@@ -111,20 +111,23 @@ public class EmployeeManagementApp {
         panel.add(departmentField);
         panel.add(new JLabel()); // Empty label for spacing
         panel.add(saveButton);
-    
+
         dialog.add(panel);
         dialog.setVisible(true);
-        }   
+    }
 }
+
 public class showAddEmployeeDialog {
 
-    //Dialod  for add
+    // Dialod for add
 }
+
 public class showDeleteEmployeeDialog {
 
-    //Dialod  for delete
+    // Dialod for delete
 }
+
 public class showEditEmployeeDialog {
 
-    //Dialod  for edit
+    // Dialod for edit
 }

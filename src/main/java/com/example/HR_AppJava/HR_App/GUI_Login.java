@@ -7,20 +7,18 @@ import java.awt.*;
 public class GUI_Login {
 
     public static void main(String[] args) {
+        // Creating two manager objects to add to the data base
         Manager one = new Manager();
-
         one.setUsername("bob.smith@company.com");
-
         one.changePassword("catsAreCool");
-
         Manager two = new Manager();
         two.setUsername("mary.shelly@company.com");
         two.changePassword("dogsRock");
-
         Manager[] managers = new Manager[2];
         managers[0] = one;
         managers[1] = two;
 
+        // Launching the swing
         SwingUtilities.invokeLater(() -> new LoginScreen(managers));
 
     }
@@ -28,6 +26,8 @@ public class GUI_Login {
 }
 
 class LoginScreen extends JFrame {
+
+    // instance variables
     private JTextField usernameField;
     private JPasswordField passwordField;
     private Manager[] managers;

@@ -1,4 +1,4 @@
-package main.java.com.example.HR_AppJava.HR_App;
+package com.example.HR_AppJava.HR_App;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -8,7 +8,7 @@ public class GUI_EmployeePage extends JFrame {
         // Create a JFrame (window)
         JFrame frame = new JFrame("Employee page");
         JPanel panel = new JPanel();
-        
+
         frame.setSize(400, 300); // Set the window size
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 

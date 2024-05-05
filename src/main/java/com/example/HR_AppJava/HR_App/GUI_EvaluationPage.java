@@ -1,10 +1,11 @@
-package main.java.com.example.HR_AppJava.HR_App;
+package com.example.HR_AppJava.HR_App;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
 public class GUI_EvaluationPage {
+    // Running the GUI
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new EvalPage());
 

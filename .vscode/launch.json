@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "GUI_Home",
+            "request": "launch",
+            "mainClass": "com.example.HR_AppJava.HR_App.GUI_Home",
+            "projectName": "HR_APPJAVA"
+        },
+        {
+            "type": "java",
+            "name": "AppLogo",
+            "request": "launch",
+            "mainClass": "com.example.HR_AppJava.HR_App.AppLogo",
+            "projectName": "HR_APPJAVA"
+        },
+        {
+            "type": "java",
             "name": "GUI_EmployeePage",
             "request": "launch",
             "mainClass": "com.example.HR_AppJava.HR_App.GUI_EmployeePage",

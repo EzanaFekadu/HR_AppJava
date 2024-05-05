@@ -6,22 +6,16 @@ public class Skill {
     private String skillType; // What kind of skill is it? A hard skill? Soft skill?
     private int levelOfSkill; // How good are they at the skill?
 
+    // Constructor
     public Skill(String t, String type, int lev) {
         title = t;
         skillType = type;
         levelOfSkill = lev;
     }
 
+    // getters
     public String getSkill() {
         return title;
-    }
-
-    public void setSkill(String s) {
-        title = s;
-    }
-
-    public void setLevelOfSkill(int lev) {
-        levelOfSkill = lev;
     }
 
     public String getSkillType() {
@@ -30,6 +24,15 @@ public class Skill {
 
     public int getSkillLevel() {
         return levelOfSkill;
+    }
+
+    // Setters
+    public void setSkill(String s) {
+        title = s;
+    }
+
+    public void setLevelOfSkill(int lev) {
+        levelOfSkill = lev;
     }
 
 }

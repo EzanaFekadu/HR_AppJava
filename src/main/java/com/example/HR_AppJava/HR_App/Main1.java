@@ -1,5 +1,7 @@
 package com.example.HR_AppJava.HR_App;
 
+//This is where we attempted to join the GUI pages together and use a communal tempDataBase
+
 public class Main1 {
     public static void main(String[] args) {
         TempDataBase dataBase = new TempDataBase();

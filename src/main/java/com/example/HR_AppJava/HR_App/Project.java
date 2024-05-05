@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Project {
+    // Instance Variables
     private boolean completed;
     private ArrayList<Skill> requiredSkills;
     private int projectId;
 
-    // constructor
+    // constructors
     public Project() {
         completed = false;
         requiredSkills = new ArrayList<>();
@@ -22,6 +23,8 @@ public class Project {
     }
 
     // methods
+
+    // Checks to see if a skill is on the required skills list
     public String checkSkill(Skill skill) {
         boolean exists = requiredSkills.contains(skill);
         if (exists) {
@@ -32,7 +35,7 @@ public class Project {
         }
     }
 
-    // modifier
+    // modifiers
     public void setId(int id) {
         projectId = id;
     }

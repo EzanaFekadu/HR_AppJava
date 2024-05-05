@@ -1,9 +1,9 @@
-package main.java.com.example.HR_AppJava.HR_App;
+package com.example.HR_AppJava.HR_App;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Manager extends Employee implements User {
+  // Instance variables
   private String username;
   private String password;
   private String title;
@@ -22,7 +22,7 @@ public class Manager extends Employee implements User {
     evaluations = new ArrayList<>();
   }
 
-  // modifier
+  // modifiers
   public void setTitle(String t) {
     title = t;
   }
@@ -32,19 +32,23 @@ public class Manager extends Employee implements User {
     return title;
   }
 
-  public List getEvals() {
+  public ArrayList<Evaluations> getEvals() {
     return evaluations;
   }
 
-  public List getEmployees() {
+  public ArrayList<Employee> getEmployees() {
     return employees;
   }
 
-  public List getTeams() {
+  public ArrayList<Team> getTeams() {
     return teams;
   }
 
-  public List findSkilledEmployees(Skill s) {
+  // Searches the array list of employees to find those that have the skill
+  // parameter s
+  // If they do have that skill they are added to an ArrayList and then the
+  // ArrayList is returned
+  public ArrayList<Employee> findSkilledEmployees(Skill s) {
     ArrayList<Employee> employees = new ArrayList<>();
 
     for (int i = 0; i < employees.size(); i++) {

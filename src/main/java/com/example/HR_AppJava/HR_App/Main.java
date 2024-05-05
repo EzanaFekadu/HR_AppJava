@@ -2,6 +2,8 @@ package com.example.HR_AppJava.HR_App;
 
 import java.util.Scanner;
 
+//Testing out certain classes 
+//This file is null and void due to modification to certain classes
 public class Main {
     Scanner scanner = new Scanner(System.in);
     static Person p1 = new Person("John Doe", 25, "123 Smtih Lane", "111-111-1111", "jdoe@company.com");
