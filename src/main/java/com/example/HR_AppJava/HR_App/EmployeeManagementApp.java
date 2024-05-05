@@ -57,13 +57,13 @@ public class EmployeeManagementApp {
             searchButton.addActionListener(e -> {
                 // Perform search based on selected criteria (Name, Team, or Department)
                 String searchText = searchField.getText();
-                // Implement search logic here
+                // TODO: Implement search logic here
                 // Update the employeeTable with search results
             });
 
             addButton.addActionListener(e -> {
                 // Show a dialog to add a new employee
-                // Implement add logic here
+                // TODO: Implement add logic here
                 showAddEmployeeDialog(tableModel);
             });
 
@@ -75,11 +75,11 @@ public class EmployeeManagementApp {
             ////////////////////////////////////////////////////////////
             editButton.addActionListener(e -> {
                 // Show a dialog to edit an existing employee
-                // Implement edit logic here
+                // TODO: Implement edit logic here
             });
 
             deleteButton.addActionListener(e -> {
-                // Implement delete logic here
+                // TODO: Implement delete logic here
             });
 
             // Show the frame
@@ -119,15 +119,15 @@ public class EmployeeManagementApp {
 
 public class showAddEmployeeDialog {
 
-    // Dialod for add
+    // TODO: Add Dialod for add
 }
 
 public class showDeleteEmployeeDialog {
 
-    // Dialod for delete
+    // TODO: Add Dialod for delete
 }
 
 public class showEditEmployeeDialog {
 
-    // Dialod for edit
+    // TODO: Add Dialod for edit
 }
